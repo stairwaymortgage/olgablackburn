@@ -1,0 +1,26 @@
+{
+  "version": 2,
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "routes": [
+    { "src": "/", "dest": "/index.html" },
+    { "src": "/blog", "dest": "/blog-expressions.html" },
+    { "src": "/contact", "dest": "/contact.html" },
+    { "src": "/olga-blackburn-realtor-fort-lauderdale", "dest": "/olga-blackburn-realtor-fort-lauderdale.html" },
+    { "src": "/student-of-jesus-follower-of-christ", "dest": "/spoke-student-of-jesus.html" },
+    { "src": "/rio-vista-church-fort-lauderdale", "dest": "/spoke-rio-vista-church.html" },
+    { "src": "/czech-heritage", "dest": "/spoke-czech-heritage.html" },
+    { "src": "/stairway-mortgage-fort-lauderdale", "dest": "/spoke-stairway-mortgage.html" },
+    { "src": "/blackburn-business-capital", "dest": "/spoke-blackburn-business-capital.html" }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "DENY" },
+        { "key": "X-XSS-Protection", "value": "1; mode=block" }
+      ]
+    }
+  ]
+}

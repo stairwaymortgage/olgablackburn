@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Olga Blackburn | Fort Lauderdale | Faith · Family · Real Estate</title>
+  <meta name="description" content="Olga Blackburn — Fort Lauderdale realtor, mother, woman of faith, and Czech-American voice. Wife of Jim Blackburn. Student of Jesus, Follower of Christ." />
+  <meta property="og:title" content="Olga Blackburn | Fort Lauderdale" />
+  <meta property="og:description" content="Faith. Family. Sunshine. Olga Blackburn — realtor, mother, and woman of faith in Fort Lauderdale, FL." />
+  <meta property="og:url" content="https://olgablackburn.com" />
+  <link rel="canonical" href="https://olgablackburn.com" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Olga Blackburn",
+    "alternateName": ["Olga Blackburnová"],
+    "jobTitle": "Realtor",
+    "worksFor": { "@type": "Organization", "name": "The Keyes Company" },
+    "url": "https://olgablackburn.com",
+    "address": { "@type": "PostalAddress", "addressLocality": "Fort Lauderdale", "addressRegion": "FL" },
+    "sameAs": ["https://jamesjblackburn.com/blackburn-realty-group"]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --sand:    #f5ede0;
+      --shell:   #faf4ec;
+      --foam:    #ffffff;
+      --coral:   #e07b6a;
+      --rose:    #c4607b;
+      --teal:    #2a8a8a;
+      --teal-lt: #4db8b8;
+      --turq:    #5bc8c8;
+      --navy:    #1a2b3c;
+      --text:    #2c2418;
+      --muted:   #7a6a58;
+      --gold:    #c9a84c;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Jost', sans-serif;
+      background: var(--shell);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    /*  ANNOUNCEMENT STRIP  */
+    .strip {
+      background: var(--teal);
+      color: #fff;
+      text-align: center;
+      padding: 10px 20px;
+      font-size: 0.78rem;
+      letter-spacing: 0.06em;
+    }
+    .strip a { color: #b2eaea; text-decoration: underline; }
+
+    /*  NAV  */
+    nav {
+      background: var(--shell);
+      border-bottom: 1px solid #e0d5c5;
+      padding: 0 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem;
+      font-weight: 400;
+      color: var(--teal);
+      letter-spacing: 0.04em;
+    }
+    .nav-links { display: flex; gap: 32px; list-style: none; }
+    .nav-links a {
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--teal); }
+
+    /*  HERO  */
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 88vh;
+    }
+    .hero-text {
+      padding: 80px 6% 80px 8%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background: var(--shell);
+      position: relative;
+    }
+    .hero-text::after {
+      content: '';
+      position: absolute;
+      right: -40px;
+      top: 15%;
+      bottom: 15%;
+      width: 1px;
+      background: linear-gradient(to bottom, transparent, var(--teal-lt), transparent);
+    }
+    .hero-eyebrow {
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 20px;
+    }
+    .hero-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(3.2rem, 6vw, 5.5rem);
+      font-weight: 300;
+      line-height: 1.0;
+      color: var(--text);
+      margin-bottom: 10px;
+    }
+    .hero-name em {
+      font-style: italic;
+      color: var(--teal);
+    }
+    .hero-tagline {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem;
+      font-weight: 300;
+      font-style: italic;
+      color: var(--muted);
+      margin-bottom: 36px;
+      line-height: 1.5;
+    }
+    .hero-pillars {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 40px;
+    }
+    .pillar {
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border: 1px solid;
+      border-radius: 100px;
+    }
+    .pillar.faith  { border-color: var(--teal);  color: var(--teal); }
+    .pillar.family { border-color: var(--rose);   color: var(--rose); }
+    .pillar.biz    { border-color: var(--coral);  color: var(--coral); }
+    .pillar.czech  { border-color: var(--gold);   color: var(--gold); }
+    .pillar.place  { border-color: var(--muted);  color: var(--muted); }
+
+    .hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; }
+    .btn-primary {
+      background: var(--teal);
+      color: #fff;
+      padding: 14px 28px;
+      border: none;
+      font-family: 'Jost', sans-serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .btn-primary:hover { background: var(--teal-lt); }
+    .btn-outline {
+      background: transparent;
+      color: var(--text);
+      padding: 14px 28px;
+      border: 1px solid var(--text);
+      font-family: 'Jost', sans-serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .btn-outline:hover { border-color: var(--teal); color: var(--teal); }
+
+    /*  HERO VISUAL  */
+    .hero-visual {
+      background: linear-gradient(145deg, #2a8a8a 0%, #1a5f7a 40%, #0d3d5c 100%);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: flex-end;
+      padding: 48px;
+    }
+    .hero-visual::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 70% 30%, rgba(91,200,200,0.25) 0%, transparent 60%),
+        radial-gradient(ellipse at 20% 80%, rgba(196,96,123,0.2) 0%, transparent 50%);
+    }
+    /* Wave decoration */
+    .wave-deco {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 120px;
+      opacity: 0.15;
+    }
+    .hero-visual-content {
+      position: relative;
+      z-index: 1;
+      color: #fff;
+    }
+    .hero-photo-placeholder {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .photo-circle {
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      border: 3px solid rgba(255,255,255,0.3);
+      background: rgba(255,255,255,0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255,255,255,0.5);
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      text-align: center;
+      padding: 20px;
+    }
+    .hero-quote {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.5rem;
+      line-height: 1.4;
+      color: rgba(255,255,255,0.9);
+      max-width: 320px;
+      margin-bottom: 12px;
+    }
+    .hero-quote-attr {
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--teal-lt);
+    }
+
+    /*  SECTION TITLES  */
+    .section-label {
+      text-align: center;
+      margin: 70px 0 12px;
+      position: relative;
+    }
+    .section-label::before,
+    .section-label::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: 80px;
+      height: 1px;
+      background: var(--teal-lt);
+    }
+    .section-label::before { right: calc(50% + 100px); }
+    .section-label::after  { left:  calc(50% + 100px); }
+    .section-label h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 0.85rem;
+      font-weight: 400;
+      font-style: italic;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--teal);
+      display: inline-block;
+    }
+    .section-sub {
+      text-align: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-style: italic;
+      color: var(--muted);
+      margin-bottom: 48px;
+    }
+
+    /*  ROW LABELS  */
+    .row-label {
+      padding: 0 5%;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .row-label span {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      font-weight: 600;
+      font-style: italic;
+      color: var(--text);
+      letter-spacing: 0.02em;
+    }
+    .row-label .dot-personal { color: var(--teal); }
+    .row-label .dot-business { color: var(--coral); }
+    .row-label .dot-blog     { color: var(--rose); }
+    .row-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(to right, var(--teal-lt), transparent);
+    }
+
+    /*  GRID  */
+    .world-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      padding: 0 5%;
+      margin-bottom: 2px;
+    }
+    .world-card {
+      padding: 36px 32px;
+      text-decoration: none;
+      display: block;
+      transition: transform 0.25s, box-shadow 0.25s;
+      position: relative;
+      overflow: hidden;
+    }
+    .world-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.12); }
+
+    /* Personal = warm sand */
+    .world-card.personal {
+      background: #efe6d8;
+      color: var(--text);
+    }
+    .world-card.personal .card-icon { color: var(--teal); }
+    .world-card.personal .card-title { color: var(--text); }
+    .world-card.personal .card-desc  { color: var(--muted); }
+    .world-card.personal .card-cta   { color: var(--teal); }
+
+    /* Business = soft teal-slate */
+    .world-card.business {
+      background: #d8e8e8;
+      color: var(--navy);
+    }
+    .world-card.business .card-icon  { color: var(--teal); }
+    .world-card.business .card-title { color: var(--navy); }
+    .world-card.business .card-desc  { color: #4a6a6a; }
+    .world-card.business .card-cta   { color: var(--teal); }
+
+    .card-icon { font-size: 1.8rem; margin-bottom: 16px; }
+    .card-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+      line-height: 1.2;
+    }
+    .card-desc {
+      font-size: 0.82rem;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+    .card-cta {
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+
+    /* Blog row */
+    .blog-header-card {
+      grid-column: 1 / -1;
+      background: linear-gradient(135deg, #1a5f7a 0%, #0d3d5c 100%);
+      color: #fff;
+      padding: 48px 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+      text-decoration: none;
+    }
+    .blog-header-card::before {
+      content: 'EXPRESSIONS';
+      position: absolute;
+      right: -20px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 8rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.05);
+      white-space: nowrap;
+      pointer-events: none;
+    }
+    .blog-title-block {}
+    .blog-header-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--teal-lt);
+      margin-bottom: 10px;
+    }
+    .blog-header-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.5rem;
+      font-weight: 300;
+      font-style: italic;
+      line-height: 1.1;
+    }
+    .blog-header-sub {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.6);
+      margin-top: 8px;
+    }
+    .blog-header-cta {
+      background: rgba(255,255,255,0.12);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.3);
+      padding: 12px 28px;
+      font-family: 'Jost', sans-serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: background 0.2s;
+      position: relative;
+      z-index: 1;
+    }
+    .blog-header-cta:hover { background: rgba(255,255,255,0.22); }
+
+    /* Post preview cards */
+    .post-cards-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      padding: 0 5%;
+      margin-bottom: 80px;
+    }
+    .post-card {
+      background: #e8ddd0;
+      padding: 28px 28px;
+      text-decoration: none;
+      border-left: 3px solid var(--rose);
+      transition: transform 0.2s;
+    }
+    .post-card:hover { transform: translateY(-3px); }
+    .post-tag {
+      font-size: 0.65rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--rose);
+      margin-bottom: 10px;
+    }
+    .post-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem;
+      font-style: italic;
+      color: var(--text);
+      line-height: 1.4;
+      margin-bottom: 10px;
+    }
+    .post-excerpt {
+      font-size: 0.78rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    /*  QUOTE BAND  */
+    .quote-band {
+      background: var(--teal);
+      color: #fff;
+      text-align: center;
+      padding: 64px 10%;
+    }
+    .quote-band blockquote {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.5rem, 3vw, 2.2rem);
+      font-style: italic;
+      font-weight: 300;
+      line-height: 1.5;
+      margin-bottom: 16px;
+    }
+    .quote-band cite {
+      font-size: 0.78rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.6);
+      font-style: normal;
+    }
+
+    /*  CONNECT  */
+    .connect {
+      background: var(--sand);
+      padding: 80px 5%;
+      text-align: center;
+    }
+    .connect h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.2rem;
+      font-weight: 300;
+      margin-bottom: 8px;
+    }
+    .connect p { color: var(--muted); font-size: 0.9rem; margin-bottom: 36px; }
+    .social-row {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .social-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 22px;
+      border: 1px solid #c8bfb0;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      transition: all 0.2s;
+      border-radius: 2px;
+    }
+    .social-link:hover { border-color: var(--teal); color: var(--teal); }
+
+    /*  FOOTER  */
+    footer {
+      background: var(--navy);
+      color: rgba(255,255,255,0.4);
+      text-align: center;
+      padding: 32px;
+      font-size: 0.75rem;
+      letter-spacing: 0.06em;
+    }
+    footer a { color: var(--teal-lt); text-decoration: none; }
+
+    .hero-visual img {
+    border-radius: 150px;
+    height: 314px;
+    width: 314px;
+    border: 5px solid #FFFFFF4D;
+}
+
+    @media (max-width: 768px) {
+      .hero { grid-template-columns: 1fr; }
+      .hero-visual { display: none; }
+      .hero-text { padding: 60px 6%; }
+      .world-grid, .post-cards-row { grid-template-columns: 1fr; }
+      .blog-header-card { flex-direction: column; gap: 24px; }
+      .section-label::before, .section-label::after { display: none; }
+      nav { padding: 0 4%; }
+      .nav-links { gap: 18px; }
+    }
+  
+    /* SVG icon system - no emojis */
+    .card-icon { margin-bottom: 20px; line-height: 1; }
+    .card-icon-svg { width: 28px; height: 28px; display: block; }
+    .world-card.personal .card-icon-svg { color: var(--teal); }
+    .world-card.business .card-icon-svg { color: var(--teal); }
+    .social-link svg { flex-shrink: 0; }
+    .strip-pin { display: inline-block; width: 12px; height: 12px; background: currentColor; clip-path: polygon(50% 0%, 75% 40%, 100% 40%, 80% 65%, 90% 100%, 50% 75%, 10% 100%, 20% 65%, 0% 40%, 25% 40%); margin-right: 6px; vertical-align: middle; }
+
+  </style>
+
+<script src="/components/inject.js"></script>
+</head>
+<body>
+
+  
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-text">
+      <p class="hero-eyebrow">Fort Lauderdale, Florida · Česká republika</p>
+      <h1 class="hero-name">Olga<br><em>Blackburn</em></h1>
+      <p class="hero-tagline">Matka. Manželka. Realtor.<br>Student of Jesus, Follower of Christ.</p>
+      <div class="hero-pillars">
+        <span class="pillar faith">Student of Jesus</span>
+        <span class="pillar family">Mother &amp; Wife</span>
+        <span class="pillar biz">Fort Lauderdale Realtor</span>
+        <span class="pillar czech">Czech-American</span>
+        <span class="pillar place">Fort Lauderdale, FL</span>
+      </div>
+      <div class="hero-ctas">
+        <a href="#video" class="btn-primary">Watch My Intro ↓</a>
+        <a href="#work" class="btn-outline">What I Do</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-photo-placeholder">
+        <div class="photo-circle">
+          
+          <br><small><img src="/image/olga.jpg" alt="Olga Blackburn" /></small>
+        </div>
+      </div>
+      <svg class="wave-deco" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M0,60 C200,100 400,20 600,60 C800,100 1000,20 1200,60 L1200,120 L0,120 Z" fill="white"/>
+      </svg>
+      <div class="hero-visual-content">
+        <p class="hero-quote">"She opens her arms to the poor and extends her hands to the needy."</p>
+        <p class="hero-quote-attr">Proverbs 31:20 · The Proverbs 31 Woman</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video section -->
+  <!-- <section id="video" style="background:#1a2b3c; padding:72px 5%; text-align:center;">
+    <p style="font-size:0.72rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--teal-lt);margin-bottom:12px;">A Personal Introduction</p>
+    <h2 style="font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:300;color:#fff;margin-bottom:32px;font-style:italic;">A Minute With Olga</h2>
+    <div style="max-width:700px;margin:0 auto;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:4px;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.4);font-size:0.85rem;">
+      
+      Paste your YouTube embed here
+    </div>
+  </section> -->
+
+  <!-- Life section -->
+  <div id="life">
+    <div class="section-label" style="margin-top:70px;">
+      <h2>My World</h2>
+    </div>
+    <p class="section-sub">Faith first. Family always. Florida forever.</p>
+
+    <!-- PERSONAL ROW -->
+    <div class="row-label">
+      <span><span class="dot-personal">·</span> Personal</span>
+    </div>
+    <div class="world-grid">
+
+      <a href="/student-of-jesus-follower-of-christ" class="world-card personal">
+        <div class="card-icon"><svg class="card-icon-svg" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="16" y1="4" x2="16" y2="28" stroke="currentColor" stroke-width="1.5"/><line x1="8" y1="11" x2="24" y2="11" stroke="currentColor" stroke-width="1.5"/></svg></div>
+        <div class="card-title">Student of Jesus,<br>Follower of Christ</div>
+        <div class="card-desc">My faith isn't background noise. Jesus the man changed how I see everything — how I parent, how I serve, how I live. I'm still learning from him every day.</div>
+        <div class="card-cta">Read my faith journey →</div>
+      </a>
+
+      <a href="/rio-vista-church-fort-lauderdale" class="world-card personal">
+        <div class="card-icon"><svg class="card-icon-svg" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 28V16L16 8L26 16V28H19V21H13V28H6Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><line x1="16" y1="4" x2="16" y2="10" stroke="currentColor" stroke-width="1.5"/><line x1="13" y1="7" x2="19" y2="7" stroke="currentColor" stroke-width="1.5"/></svg></div>
+        <div class="card-title">Rio Vista Church<br>&amp; Bible Study</div>
+        <div class="card-desc">My church home in Fort Lauderdale. Where Jim and I worship, grow, and serve. Our Bible study group is one of my greatest joys in this season of life.</div>
+        <div class="card-cta">Our community →</div>
+      </a>
+
+      <a href="/czech-heritage" class="world-card personal">
+        <div class="card-icon"><svg class="card-icon-svg" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="8" width="24" height="16" rx="1" stroke="currentColor" stroke-width="1.5"/><line x1="4" y1="16" x2="28" y2="16" stroke="currentColor" stroke-width="1"/><path d="M4 8 L14 16 L4 24" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></div>
+        <div class="card-title">Česká dědičnost<br><small style="font-size:0.75rem;color:var(--muted);">Czech Heritage</small></div>
+        <div class="card-desc">Jsem hrdá Češka žijící v krásném Fort Lauderdale. Pro všechny Čechy v Americe — jste vítáni. Najdeme se zde. <em style="color:var(--muted);font-size:0.8rem;">(Czech-language page)</em></div>
+        <div class="card-cta">Česky →</div>
+      </a>
+
+    </div><!-- /personal grid -->
+
+    <!-- BUSINESS ROW -->
+    <div class="row-label" style="margin-top:24px;">
+      <span><span class="dot-business">·</span> Business</span>
+    </div>
+    <div id="work" class="world-grid">
+
+      <a href="/olga-blackburn-realtor-fort-lauderdale" class="world-card business">
+        <div class="card-icon"><svg class="card-icon-svg" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 14L16 5L27 14V27H20V20H12V27H5V14Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></div>
+        <div class="card-title">Olga Blackburn<br>Realtor · The Keyes Company</div>
+        <div class="card-desc">I help people find their home in Fort Lauderdale — and through LeadingRE, I connect buyers and sellers across the country and around the world.</div>
+        <div class="card-cta">Work with me →</div>
+      </a>
+
+      <a href="/stairway-mortgage-fort-lauderdale" class="world-card business">
+        <div class="card-icon"><svg class="card-icon-svg" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="10" width="24" height="18" rx="1" stroke="currentColor" stroke-width="1.5"/><path d="M10 10V7C10 5.34 11.34 4 13 4H19C20.66 4 22 5.34 22 7V10" stroke="currentColor" stroke-width="1.5"/><line x1="12" y1="18" x2="20" y2="18" stroke="currentColor" stroke-width="1.5"/><line x1="12" y1="22" x2="16" y2="22" stroke="currentColor" stroke-width="1.5"/></svg></div>
+        <div class="card-title">Stairway Mortgage<br>Fort Lauderdale</div>
+        <div class="card-desc">Jim's mortgage branch. Together we offer a full transaction — real estate and financing under one roof. Most couples can't say that.</div>
+        <div class="card-cta">Mortgage options →</div>
+      </a>
+
+      <a href="/blackburn-business-capital" class="world-card business">
+        <div class="card-icon"><svg class="card-icon-svg" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 5V10M16 22V27M8 16H5M27 16H24M10.5 10.5L7.5 7.5M24.5 24.5L21.5 21.5M21.5 10.5L24.5 7.5M7.5 24.5L10.5 21.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="16" cy="16" r="5" stroke="currentColor" stroke-width="1.5"/></svg></div>
+        <div class="card-title">Blackburn<br>Business Capital</div>
+        <div class="card-desc">Our business funding arm. If you're a business owner who needs capital to grow, Jim's team at Blackburn Business Capital has creative solutions.</div>
+        <div class="card-cta">Explore funding →</div>
+      </a>
+
+    </div><!-- /business grid -->
+
+    <!-- BLOG ROW -->
+    <div class="row-label" style="margin-top:24px;">
+      <span><span class="dot-blog">·</span> My Voice</span>
+    </div>
+    <a href="/blog" class="blog-header-card">
+      <div class="blog-title-block">
+        <div class="blog-header-label">Olga Blackburn · Personal Blog</div>
+        <div class="blog-header-name">Expressions &amp; Testimonies</div>
+        <div class="blog-header-sub">Motherhood · Faith · Florida · Life as a Czech-American · Gardens</div>
+      </div>
+      <span class="blog-header-cta">Read the Blog →</span>
+    </a>
+
+    <div class="post-cards-row">
+      <a href="/blog" class="post-card">
+        <div class="post-tag">Motherhood</div>
+        <div class="post-title">What Nobody Tells You About Raising Kids in Fort Lauderdale</div>
+        <div class="post-excerpt">The sunshine is real. So is the hustle. Here's what I've learned raising a family in South Florida...</div>
+      </a>
+      <a href="/blog" class="post-card">
+        <div class="post-tag">Faith</div>
+        <div class="post-title">Why "Student of Jesus" Means More to Me Than "Christian"</div>
+        <div class="post-excerpt">The label never quite fit. But the teachings — those changed everything. My journey toward Jesus the man...</div>
+      </a>
+      <a href="/blog" class="post-card">
+        <div class="post-tag">Czech Life</div>
+        <div class="post-title">Od Prahy k Pacifiku: Jak Jsem Našla Domov v Americe</div>
+        <div class="post-excerpt">From Czech Republic to Fort Lauderdale. The culture shock, the beauty, and everything I never expected...</div>
+      </a>
+    </div>
+
+  </div><!-- /life -->
+
+  <!-- Quote band -->
+  <div class="quote-band">
+    <blockquote>"The goal was never to be successful in the American way. It was to be faithful in the way Jesus showed us."</blockquote>
+    <cite>— Olga Blackburn · Fort Lauderdale, FL</cite>
+  </div>
+
+  <!-- Connect -->
+  <section id="connect" class="connect">
+    <h2>Let's Connect</h2>
+    <p>Whether you're buying a home, moving to Fort Lauderdale, or just want to say hello — I'm here.</p>
+    <div class="social-row">
+      <a href="https://instagram.com/yourhandle" class="social-link"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="16" height="16"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg> Instagram</a>
+      <a href="https://facebook.com/yourpage" class="social-link"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="16" height="16"><path d="M18 2H15C13.67 2 12 3.67 12 5V8H18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 8H8V12H12V22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Facebook</a>
+      <a href="https://linkedin.com/in/yourprofile" class="social-link"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="16" height="16"><rect x="2" y="2" width="20" height="20" rx="3" stroke="currentColor" stroke-width="1.5"/><path d="M7 10V17M7 7V7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M11 17V13C11 11.34 12.34 10 14 10C15.66 10 17 11.34 17 13V17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M11 10V17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> LinkedIn</a>
+      <a href="/cdn-cgi/l/email-protection#fd92919a9cbd92919a9c9f919c9e969f888f93d39e9290" class="social-link"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="16" height="16"><rect x="2" y="5" width="20" height="14" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M2 8L12 13L22 8" stroke="currentColor" stroke-width="1.5"/></svg> Email Olga</a>
+      <a href="https://jamesjblackburn.com" class="social-link"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="16" height="16"><path d="M10 13C10.6 13.8 11.5 14.4 12.5 14.7C13.5 15 14.6 14.9 15.5 14.5L18.5 11.5C20.2 9.8 20.2 7 18.5 5.3C16.8 3.6 14 3.6 12.3 5.3L10.8 6.8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M14 11C13.4 10.2 12.5 9.6 11.5 9.3C10.5 9 9.4 9.1 8.5 9.5L5.5 12.5C3.8 14.2 3.8 17 5.5 18.7C7.2 20.4 10 20.4 11.7 18.7L13.2 17.2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> Jim's Site</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>Olga Blackburn · Fort Lauderdale, Florida · Licensed Realtor · The Keyes Company</p>
+    <p style="margin-top:8px;"><a href="https://jamesjblackburn.com">jamesjblackburn.com</a> &nbsp;|&nbsp; <a href="/blog">Expressions &amp; Test
+
+</body>
+</html>
