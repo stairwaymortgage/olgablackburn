@@ -1,0 +1,116 @@
+document.currentScript.insertAdjacentHTML('afterend', `
+<div class="site-header-global">
+
+  <!-- Announcement Strip -->
+  <div class="global-strip">
+    Moving to Fort Lauderdale? &nbsp;|&nbsp;
+    <a href="/olga-blackburn-realtor-fort-lauderdale.html">Talk to Olga about your next home &rarr;</a>
+  </div>
+
+  <!-- Main Nav -->
+  <nav class="global-nav">
+    <a href="/index.html" class="global-nav-logo">Olga Blackburn</a>
+    <ul class="global-nav-links">
+      <li><a href="/spoke-student-of-jesus.html">Student of Jesus</a></li>
+      <li><a href="/spoke-rio-vista-church.html">Rio Vista Church</a></li>
+      <li><a href="/spoke-czech-heritage.html">Czech Heritage</a></li>
+      <li><a href="/olga-blackburn-realtor-fort-lauderdale.html">Olga Realtor</a></li>
+      <li><a href="/spoke-stairway-mortgage.html">Stairway Mortgage</a></li>
+      <li><a href="/spoke-blackburn-business-capital.html">Blackburn Business Capital</a></li>
+      <li><a href="/contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+
+</div>
+
+<style>
+  /* ── Strip ── */
+  .global-strip {
+    background: #2a8a8a;
+    color: #fff;
+    text-align: center;
+    padding: 11px 20px;
+    font-family: 'Jost', sans-serif;
+    font-size: 0.82rem;
+    letter-spacing: 0.04em;
+  }
+  .global-strip a {
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255,255,255,0.5);
+    padding-bottom: 1px;
+    transition: border-color 0.2s;
+  }
+  .global-strip a:hover { border-color: #fff; }
+
+  /* ── Nav ── */
+  .global-nav {
+    background: #faf4ec;
+    border-bottom: 1px solid #e0d5c5;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 68px;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+  }
+  .global-nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.35rem;
+    font-weight: 400;
+    color: #2a8a8a;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .global-nav-links {
+    display: flex;
+    gap: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+  }
+  .global-nav-links li a {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #7a6a58;
+    text-decoration: none;
+    padding: 8px 16px;
+    display: block;
+    transition: color 0.2s;
+    white-space: nowrap;
+  }
+  .global-nav-links li a:hover { color: #2a8a8a; }
+
+  /* Active page highlight */
+  .global-nav-links li a.active { color: #2a8a8a; }
+
+  @media (max-width: 1024px) {
+    .global-nav-links li a { padding: 8px 10px; font-size: 0.65rem; }
+  }
+  @media (max-width: 768px) {
+    .global-nav { flex-wrap: wrap; height: auto; padding: 12px 4%; gap: 12px; }
+    .global-nav-links { flex-wrap: wrap; gap: 0; justify-content: center; }
+    .global-nav-links li a { padding: 6px 8px; font-size: 0.62rem; }
+  }
+</style>
+
+<script>
+  // Highlight active page
+  (function() {
+    var path = window.location.pathname.split('/').pop() || 'index.html';
+    var links = document.querySelectorAll('.global-nav-links li a');
+    links.forEach(function(link) {
+      if (link.getAttribute('href') === '/' + path) {
+        link.classList.add('active');
+      }
+    });
+  })();
+</script>
+`);
