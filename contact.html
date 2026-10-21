@@ -210,7 +210,7 @@
       <p class="form-intro-title">Whether you're buying, selling, or just getting started — Olga is here.</p>
     </div>
 
-    <form class="contact-form" id="contactForm" action="mailto:olgablackburnre@gmail.com" method="POST" enctype="text/plain">
+    <form class="contact-form" id="contactForm">
 
       <div class="form-row">
         <div class="form-group">
@@ -256,6 +256,7 @@
       <hr class="form-divider" />
 
       <button class="form-submit" type="submit">Send Message →</button>
+      <p class="form-error" id="formError" style="display:none;color:#b42318;margin-top:14px;font-size:.9rem">Sorry — that didn't go through. Please try again, or email olgablackburnre@gmail.com.</p>
 
     </form>
 
@@ -281,6 +282,39 @@
     </p>
   </footer>
 
+
+  <script>
+    // Sends this form to OneFocus (the family CRM). Each message becomes a
+    // contact, Olga gets an email alert, and the sender gets a confirm note.
+    (function () {
+      var form = document.getElementById('contactForm');
+      var ok = document.getElementById('formSuccess');
+      var bad = document.getElementById('formError');
+      var btn = form.querySelector('button[type="submit"]');
+      var MAP = { 'First Name': 'first_name', 'Last Name': 'last_name', 'Email': 'email', 'Phone': 'phone', 'Interest': 'interest', 'Message': 'message' };
+      form.addEventListener('submit', async function (e) {
+        e.preventDefault();
+        var out = { form: 'contact' };
+        new FormData(form).forEach(function (v, k) { if (v !== '') out[MAP[k] || k] = v; });
+        out.name = [out.first_name, out.last_name].filter(Boolean).join(' ');
+        var label = btn.textContent;
+        btn.disabled = true; btn.textContent = 'Sending…'; bad.style.display = 'none';
+        try {
+          var r = await fetch('https://www.onefocuscrm.com/api/forms/olgablackburn', {
+            method: 'POST',
+            headers: { 'content-type': 'application/json' },
+            body: JSON.stringify(out)
+          });
+          if (!r.ok) throw new Error('HTTP ' + r.status);
+          form.style.display = 'none';
+          ok.style.display = 'block';
+        } catch (err) {
+          bad.style.display = 'block';
+          btn.disabled = false; btn.textContent = label;
+        }
+      });
+    })();
+  </script>
 
 </body>
 </html>
