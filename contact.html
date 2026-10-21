@@ -297,6 +297,8 @@
         var out = { form: 'contact' };
         new FormData(form).forEach(function (v, k) { if (v !== '') out[MAP[k] || k] = v; });
         out.name = [out.first_name, out.last_name].filter(Boolean).join(' ');
+        // Lead source (ad, search, referral…) and pages viewed, from /t.js.
+        if (window.OneFocus) out._of = window.OneFocus.attribution();
         var label = btn.textContent;
         btn.disabled = true; btn.textContent = 'Sending…'; bad.style.display = 'none';
         try {
@@ -316,5 +318,6 @@
     })();
   </script>
 
+<script src="https://www.onefocuscrm.com/t.js" data-brand="olgablackburn" defer></script>
 </body>
 </html>
